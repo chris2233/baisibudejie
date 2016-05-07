@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F5584431CDE74D8004E47EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F5584421CDE74D8004E47EE /* Images.xcassets */; };
+		2F5584461CDE7A43004E47EE /* ZJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5584451CDE7A43004E47EE /* ZJTabBarController.m */; };
 		2F58C19F1CDCEB9500B59ECD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C19E1CDCEB9500B59ECD /* main.m */; };
 		2F58C1A21CDCEB9500B59ECD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C1A11CDCEB9500B59ECD /* AppDelegate.m */; };
-		2F58C1A51CDCEB9500B59ECD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C1A41CDCEB9500B59ECD /* ViewController.m */; };
-		2F58C1A81CDCEB9500B59ECD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F58C1A61CDCEB9500B59ECD /* Main.storyboard */; };
-		2F58C1AA1CDCEB9500B59ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F58C1A91CDCEB9500B59ECD /* Assets.xcassets */; };
-		2F58C1AD1CDCEB9500B59ECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F58C1AB1CDCEB9500B59ECD /* LaunchScreen.storyboard */; };
 		2F58C1B81CDCEB9500B59ECD /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C1B71CDCEB9500B59ECD /* _____Tests.m */; };
 		2F58C1C31CDCEB9500B59ECD /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C1C21CDCEB9500B59ECD /* _____UITests.m */; };
 /* End PBXBuildFile section */
@@ -35,15 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F5584421CDE74D8004E47EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2F5584441CDE7A43004E47EE /* ZJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTabBarController.h; sourceTree = "<group>"; };
+		2F5584451CDE7A43004E47EE /* ZJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTabBarController.m; sourceTree = "<group>"; };
 		2F58C19A1CDCEB9500B59ECD /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F58C19E1CDCEB9500B59ECD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F58C1A01CDCEB9500B59ECD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2F58C1A11CDCEB9500B59ECD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2F58C1A31CDCEB9500B59ECD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2F58C1A41CDCEB9500B59ECD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2F58C1A71CDCEB9500B59ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2F58C1A91CDCEB9500B59ECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2F58C1AC1CDCEB9500B59ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F58C1AE1CDCEB9500B59ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F58C1B31CDCEB9500B59ECD /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F58C1B71CDCEB9500B59ECD /* _____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____Tests.m"; sourceTree = "<group>"; };
@@ -101,14 +97,10 @@
 		2F58C19C1CDCEB9500B59ECD /* 百思不得姐 */ = {
 			isa = PBXGroup;
 			children = (
+				2F5584441CDE7A43004E47EE /* ZJTabBarController.h */,
+				2F5584451CDE7A43004E47EE /* ZJTabBarController.m */,
 				2F58C1A01CDCEB9500B59ECD /* AppDelegate.h */,
 				2F58C1A11CDCEB9500B59ECD /* AppDelegate.m */,
-				2F58C1A31CDCEB9500B59ECD /* ViewController.h */,
-				2F58C1A41CDCEB9500B59ECD /* ViewController.m */,
-				2F58C1A61CDCEB9500B59ECD /* Main.storyboard */,
-				2F58C1A91CDCEB9500B59ECD /* Assets.xcassets */,
-				2F58C1AB1CDCEB9500B59ECD /* LaunchScreen.storyboard */,
-				2F58C1AE1CDCEB9500B59ECD /* Info.plist */,
 				2F58C19D1CDCEB9500B59ECD /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -117,7 +109,9 @@
 		2F58C19D1CDCEB9500B59ECD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2F5584421CDE74D8004E47EE /* Images.xcassets */,
 				2F58C19E1CDCEB9500B59ECD /* main.m */,
+				2F58C1AE1CDCEB9500B59ECD /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -202,6 +196,7 @@
 		2F58C1921CDCEB9500B59ECD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZJ;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = zhangjie;
 				TargetAttributes = {
@@ -246,9 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F58C1AD1CDCEB9500B59ECD /* LaunchScreen.storyboard in Resources */,
-				2F58C1AA1CDCEB9500B59ECD /* Assets.xcassets in Resources */,
-				2F58C1A81CDCEB9500B59ECD /* Main.storyboard in Resources */,
+				2F5584431CDE74D8004E47EE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F58C1A51CDCEB9500B59ECD /* ViewController.m in Sources */,
+				2F5584461CDE7A43004E47EE /* ZJTabBarController.m in Sources */,
 				2F58C1A21CDCEB9500B59ECD /* AppDelegate.m in Sources */,
 				2F58C19F1CDCEB9500B59ECD /* main.m in Sources */,
 			);
@@ -309,25 +302,6 @@
 			targetProxy = 2F58C1BF1CDCEB9500B59ECD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		2F58C1A61CDCEB9500B59ECD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2F58C1A71CDCEB9500B59ECD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2F58C1AB1CDCEB9500B59ECD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2F58C1AC1CDCEB9500B59ECD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2F58C1C51CDCEB9500B59ECD /* Debug */ = {
@@ -414,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SuperShit.-----";
@@ -425,6 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SuperShit.-----";
@@ -499,6 +475,7 @@
 				2F58C1C91CDCEB9500B59ECD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F58C1CA1CDCEB9500B59ECD /* Build configuration list for PBXNativeTarget "百思不得姐Tests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +484,7 @@
 				2F58C1CC1CDCEB9500B59ECD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F58C1CD1CDCEB9500B59ECD /* Build configuration list for PBXNativeTarget "百思不得姐UITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +493,7 @@
 				2F58C1CF1CDCEB9500B59ECD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
