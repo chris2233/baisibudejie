@@ -7,6 +7,10 @@
 //
 
 #import "ZJTabBarController.h"
+#import "ZJEssenceViewController.h"
+#import "ZJNewViewController.h"
+#import "ZJFriendTrendsViewController.h"
+#import "ZJMeViewController.h"
 
 @interface ZJTabBarController ()
 
@@ -17,40 +21,52 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // 往里面添加自控制器就可以了
-    UIViewController *vc01 = [[UIViewController alloc]init];
-    vc01.tabBarItem.title = @"精华";
-    vc01.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_icon"];
-    vc01.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_essence_click_icon"];
-    vc01.view.backgroundColor = [UIColor  redColor];
-    [self addChildViewController:vc01];
     
-    UIViewController *vc02 = [[UIViewController alloc]init];
-    vc02.tabBarItem.title = @"新帖";
-    vc02.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
-    vc02.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon"];
-    vc02.view.backgroundColor = [UIColor  greenColor];
-    [self addChildViewController:vc02];
+    NSMutableDictionary *attrsDict = [NSMutableDictionary dictionary];
+    attrsDict[NSFontAttributeName] = [UIFont systemFontOfSize:12];
+    attrsDict[NSForegroundColorAttributeName] = [UIColor grayColor];
     
-    UIViewController *vc03 = [[UIViewController alloc]init];
-    vc03.tabBarItem.title = @"关注";
-    vc03.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
-    vc03.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon"];
-    vc03.view.backgroundColor = [UIColor  blueColor];
-    [self addChildViewController:vc03];
+    NSMutableDictionary *selectedAttrsDict = [NSMutableDictionary dictionary];
+    selectedAttrsDict[NSFontAttributeName] = attrsDict[NSFontAttributeName];
+    selectedAttrsDict[NSForegroundColorAttributeName] = [UIColor grayColor];
     
-    UIViewController *vc04 = [[UIViewController alloc]init];
-    vc04.tabBarItem.title = @"我";
-    vc04.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];
-    vc04.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_me_click_icon"];
-    vc04.view.backgroundColor = [UIColor  whiteColor];
-    [self addChildViewController:vc04];
+    UITabBarItem *item = [UITabBarItem appearance];
+    [item setTitleTextAttributes:attrsDict forState:(UIControlStateNormal)];
+    [item setTitleTextAttributes:selectedAttrsDict forState:(UIControlStateSelected)];
+    
+    [self          setupChildVc:[[ZJEssenceViewController alloc]init]
+                       andTitle:@"精华"
+                   andImageName:@"tabBar_essence_icon"
+           andSelectedImageName:@"tabBar_essence_click_icon"];
+    
+    [self          setupChildVc:[[ZJNewViewController alloc]init]
+                       andTitle:@"新帖"
+                   andImageName:@"tabBar_new_icon"
+           andSelectedImageName:@"tabBar_new_click_icon"];
+    
+    [self          setupChildVc:[[ZJFriendTrendsViewController alloc]init]
+                       andTitle:@"关注"
+                   andImageName:@"tabBar_friendTrends_icon"
+           andSelectedImageName:@"tabBar_friendTrends_click_icon"];
+    
+    [self           setupChildVc:[[ZJMeViewController alloc]init]
+                        andTitle:@"我"
+                    andImageName:@"tabBar_me_icon"
+            andSelectedImageName:@"tabBar_me_click_icon"];
+    
 }
-
-- (void)didReceiveMemoryWarning
+/**
+ *  初始化自控制器
+ */
+-(void)setupChildVc:(UIViewController *)vc andTitle:(NSString *)title andImageName:(NSString *)image andSelectedImageName:(NSString *)selectedImage
 {
-    [super didReceiveMemoryWarning];
+    //设置文字图片
+    vc.tabBarItem.title = title;
+    vc.tabBarItem.image = [UIImage imageNamed:image ];
+    vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
+    vc.view.backgroundColor = [UIColor  colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
+    //添加自控制器
+    [self addChildViewController:vc];
 }
-
 
 @end
