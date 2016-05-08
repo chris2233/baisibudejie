@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐
+//
+//  Created by 张杰 on 16/5/8.
+//  Copyright © 2016年 zhangjie. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+ZJExtense.h"
+
+#ifdef DEBUG
+#define ZJLog(...) NSLog(__VA_ARGS__)
+#else
+#define ZJLog(...)
+#endif
+
+#define ZJLogFunc ZJLog(@"%s",__FUNCTION__)
+
+#endif

@@ -13,6 +13,8 @@
 		2F55844E1CDF1E15004E47EE /* ZJNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55844D1CDF1E15004E47EE /* ZJNewViewController.m */; };
 		2F5584511CDF1E33004E47EE /* ZJFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5584501CDF1E33004E47EE /* ZJFriendTrendsViewController.m */; };
 		2F5584541CDF1E43004E47EE /* ZJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5584531CDF1E43004E47EE /* ZJMeViewController.m */; };
+		2F5584571CDF21DF004E47EE /* ZJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5584561CDF21DF004E47EE /* ZJTabBar.m */; };
+		2F55845A1CDF29F2004E47EE /* UIView+ZJExtense.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5584591CDF29F2004E47EE /* UIView+ZJExtense.m */; };
 		2F58C19F1CDCEB9500B59ECD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C19E1CDCEB9500B59ECD /* main.m */; };
 		2F58C1A21CDCEB9500B59ECD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C1A11CDCEB9500B59ECD /* AppDelegate.m */; };
 		2F58C1B81CDCEB9500B59ECD /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58C1B71CDCEB9500B59ECD /* _____Tests.m */; };
@@ -48,6 +50,11 @@
 		2F5584501CDF1E33004E47EE /* ZJFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJFriendTrendsViewController.m; sourceTree = "<group>"; };
 		2F5584521CDF1E43004E47EE /* ZJMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJMeViewController.h; sourceTree = "<group>"; };
 		2F5584531CDF1E43004E47EE /* ZJMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJMeViewController.m; sourceTree = "<group>"; };
+		2F5584551CDF21DF004E47EE /* ZJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTabBar.h; sourceTree = "<group>"; };
+		2F5584561CDF21DF004E47EE /* ZJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTabBar.m; sourceTree = "<group>"; };
+		2F5584581CDF29F2004E47EE /* UIView+ZJExtense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZJExtense.h"; sourceTree = "<group>"; };
+		2F5584591CDF29F2004E47EE /* UIView+ZJExtense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZJExtense.m"; sourceTree = "<group>"; };
+		2F55845B1CDF2A56004E47EE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
 		2F58C19A1CDCEB9500B59ECD /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F58C19E1CDCEB9500B59ECD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F58C1A01CDCEB9500B59ECD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +104,10 @@
 				2F5584501CDF1E33004E47EE /* ZJFriendTrendsViewController.m */,
 				2F5584521CDF1E43004E47EE /* ZJMeViewController.h */,
 				2F5584531CDF1E43004E47EE /* ZJMeViewController.m */,
+				2F5584551CDF21DF004E47EE /* ZJTabBar.h */,
+				2F5584561CDF21DF004E47EE /* ZJTabBar.m */,
+				2F5584581CDF29F2004E47EE /* UIView+ZJExtense.h */,
+				2F5584591CDF29F2004E47EE /* UIView+ZJExtense.m */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -125,6 +136,7 @@
 		2F58C19C1CDCEB9500B59ECD /* 百思不得姐 */ = {
 			isa = PBXGroup;
 			children = (
+				2F55845B1CDF2A56004E47EE /* PrefixHeader.pch */,
 				2F5584441CDE7A43004E47EE /* ZJTabBarController.h */,
 				2F5584451CDE7A43004E47EE /* ZJTabBarController.m */,
 				2F58C1A01CDCEB9500B59ECD /* AppDelegate.h */,
@@ -295,10 +307,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F5584461CDE7A43004E47EE /* ZJTabBarController.m in Sources */,
+				2F55845A1CDF29F2004E47EE /* UIView+ZJExtense.m in Sources */,
 				2F5584541CDF1E43004E47EE /* ZJMeViewController.m in Sources */,
 				2F55844B1CDF1E03004E47EE /* ZJEssenceViewController.m in Sources */,
 				2F55844E1CDF1E15004E47EE /* ZJNewViewController.m in Sources */,
 				2F58C1A21CDCEB9500B59ECD /* AppDelegate.m in Sources */,
+				2F5584571CDF21DF004E47EE /* ZJTabBar.m in Sources */,
 				2F5584511CDF1E33004E47EE /* ZJFriendTrendsViewController.m in Sources */,
 				2F58C19F1CDCEB9500B59ECD /* main.m in Sources */,
 			);
@@ -421,6 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "/Users/zhangjie/GitHub/baisibudejie/百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SuperShit.-----";
@@ -433,6 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "/Users/zhangjie/GitHub/baisibudejie/百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SuperShit.-----";

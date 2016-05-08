@@ -11,6 +11,7 @@
 #import "ZJNewViewController.h"
 #import "ZJFriendTrendsViewController.h"
 #import "ZJMeViewController.h"
+#import "ZJTabBar.h"
 
 @interface ZJTabBarController ()
 
@@ -53,6 +54,8 @@
                         andTitle:@"我"
                     andImageName:@"tabBar_me_icon"
             andSelectedImageName:@"tabBar_me_click_icon"];
+    //使用kvc访问成员变量
+    [self setValue:[[ZJTabBar alloc] init] forKey:@"tabBar"];
     
 }
 /**
@@ -60,13 +63,17 @@
  */
 -(void)setupChildVc:(UIViewController *)vc andTitle:(NSString *)title andImageName:(NSString *)image andSelectedImageName:(NSString *)selectedImage
 {
+    //设置导航栏的标题
+    vc.navigationItem.title = title;
     //设置文字图片
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image ];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
     vc.view.backgroundColor = [UIColor  colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
-    //添加自控制器
-    [self addChildViewController:vc];
+    //包装一个导航栏控制器
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    [self addChildViewController:nav];
+    
 }
 
 @end
