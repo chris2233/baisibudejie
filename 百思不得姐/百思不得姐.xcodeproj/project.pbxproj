@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F0592B71CE0684900336E29 /* ZJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0592B61CE0684900336E29 /* ZJNavigationController.m */; };
+		2F46C4261CE16CB90027FB35 /* ZJFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F46C4251CE16CB90027FB35 /* ZJFriendTrendsViewController.xib */; };
 		2F5584431CDE74D8004E47EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F5584421CDE74D8004E47EE /* Images.xcassets */; };
 		2F55848E1CDF4AA8004E47EE /* ZJEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5584691CDF4AA8004E47EE /* ZJEssenceViewController.m */; };
 		2F55848F1CDF4AA8004E47EE /* ZJFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55846F1CDF4AA8004E47EE /* ZJFriendTrendsViewController.m */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		2F0592B51CE0684900336E29 /* ZJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJNavigationController.h; sourceTree = "<group>"; };
 		2F0592B61CE0684900336E29 /* ZJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJNavigationController.m; sourceTree = "<group>"; };
+		2F46C4251CE16CB90027FB35 /* ZJFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJFriendTrendsViewController.xib; sourceTree = "<group>"; };
 		2F5584421CDE74D8004E47EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2F5584681CDF4AA8004E47EE /* ZJEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJEssenceViewController.h; sourceTree = "<group>"; };
 		2F5584691CDF4AA8004E47EE /* ZJEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJEssenceViewController.m; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				2F55846E1CDF4AA8004E47EE /* ZJFriendTrendsViewController.h */,
 				2F55846F1CDF4AA8004E47EE /* ZJFriendTrendsViewController.m */,
+				2F46C4251CE16CB90027FB35 /* ZJFriendTrendsViewController.xib */,
 			);
 			path = Cotrollers;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F46C4261CE16CB90027FB35 /* ZJFriendTrendsViewController.xib in Resources */,
 				2F5584431CDE74D8004E47EE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
