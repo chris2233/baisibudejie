@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="category" id="KGk-i7-Jjw" customClass="ZJRecommandTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="322" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYZ-I9-UKI" userLabel="分割线">
+                        <rect key="frame" x="0.0" y="42" width="322" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Brs-n1-Duf"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Di-Yg-CDB">
+                        <rect key="frame" x="8" y="10" width="306" height="23"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCH-mo-oxu" userLabel="MarkView">
+                        <rect key="frame" x="0.0" y="0.0" width="5" height="43"/>
+                        <color key="backgroundColor" red="0.91892421245574951" green="0.25553438067436218" blue="0.17172294855117798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="rlI-TW-81W"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="AYZ-I9-UKI" secondAttribute="bottom" id="MeP-Gd-vdA"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="7Di-Yg-CDB" secondAttribute="trailing" id="QQ8-7k-Wee"/>
+                    <constraint firstItem="7Di-Yg-CDB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="Tsc-aJ-NFt"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="7Di-Yg-CDB" secondAttribute="bottom" constant="2" id="UOp-gD-Gjo"/>
+                    <constraint firstItem="7Di-Yg-CDB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="aGr-yq-5k5"/>
+                    <constraint firstAttribute="trailing" secondItem="AYZ-I9-UKI" secondAttribute="trailing" id="kQX-lx-Nen"/>
+                    <constraint firstAttribute="bottom" secondItem="SCH-mo-oxu" secondAttribute="bottom" id="p5F-ip-zfR"/>
+                    <constraint firstItem="SCH-mo-oxu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qWx-oB-pbI"/>
+                    <constraint firstItem="SCH-mo-oxu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rAg-Ey-y3F"/>
+                    <constraint firstItem="AYZ-I9-UKI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="wLC-4e-vy7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="MarkView" destination="SCH-mo-oxu" id="25f-Sp-SSH"/>
+                <outlet property="categoryLabel" destination="7Di-Yg-CDB" id="MDu-ku-q4C"/>
+            </connections>
+            <point key="canvasLocation" x="219" y="31"/>
+        </tableViewCell>
+    </objects>
+</document>

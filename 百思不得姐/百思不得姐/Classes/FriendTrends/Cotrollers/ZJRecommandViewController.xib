@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZJRecommandViewController">
+            <connections>
+                <outlet property="categoryTableView" destination="cFD-tT-AkO" id="kfw-Uj-rei"/>
+                <outlet property="userTableView" destination="oih-jP-ZpR" id="tG7-lK-D1P"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cFD-tT-AkO" userLabel="左侧">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="Rwc-ph-Oce"/>
+                    </constraints>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="U70-mg-1dd"/>
+                        <outlet property="delegate" destination="-1" id="XT6-By-PKY"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oih-jP-ZpR" userLabel="右侧">
+                    <rect key="frame" x="70" y="0.0" width="530" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="5je-k2-umm"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="cFD-tT-AkO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="24Y-RR-AgL"/>
+                <constraint firstItem="oih-jP-ZpR" firstAttribute="leading" secondItem="cFD-tT-AkO" secondAttribute="trailing" id="6LD-Y2-hLg"/>
+                <constraint firstItem="cFD-tT-AkO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="CH3-51-Cwy"/>
+                <constraint firstAttribute="bottom" secondItem="cFD-tT-AkO" secondAttribute="bottom" id="FFt-y1-7nI"/>
+                <constraint firstAttribute="trailing" secondItem="oih-jP-ZpR" secondAttribute="trailing" id="fdj-YM-WpK"/>
+                <constraint firstAttribute="bottom" secondItem="oih-jP-ZpR" secondAttribute="bottom" id="kX1-14-SAx"/>
+                <constraint firstItem="oih-jP-ZpR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="s0d-PA-5Ba"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
