@@ -276,11 +276,14 @@ static NSString * const ZJUserID = @"user";
 }
 
 #pragma mark - 控制器的销毁
-
 -(void)dealloc
 {
     //停止所有的数据请求操作
     [self.manager.operationQueue cancelAllOperations];
+    //所有刷新停止
+    [self.userTableView.mj_header endRefreshing];
+    [self.userTableView.mj_footer endRefreshing];
+    ZJLogFunc;
 }
 
 @end
