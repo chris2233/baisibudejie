@@ -1,12 +1,12 @@
 //
-//  ZJWordsViewController.m
+//  ZJTopicViewController.m
 //  百思不得姐
 //
 //  Created by 张杰 on 16/5/12.
 //  Copyright © 2016年 zhangjie. All rights reserved.
 //
 
-#import "ZJWordsViewController.h"
+#import "ZJTopicViewController.h"
 #import "ZJTopic.h"
 #import "ZJTopicCell.h"
 #import <AFNetworking.h>
@@ -14,7 +14,7 @@
 #import <MJRefresh.h>
 #import <UIImageView+WebCache.h>
 
-@interface ZJWordsViewController ()
+@interface ZJTopicViewController ()
 
 //帖子数据
 @property (nonatomic, strong) NSMutableArray *topicArray;
@@ -24,10 +24,10 @@
 @property (nonatomic, strong) NSString *maxtime;
 //上一次请求的参数
 @property (nonatomic, strong) NSDictionary *params;
+
 @end
 
-@implementation ZJWordsViewController
-
+@implementation ZJTopicViewController
 
 - (NSMutableArray *)topicArray
 {
@@ -70,7 +70,7 @@ static NSString * const  ZJTopicCellId = @"topic";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZJTopicCell class]) bundle:nil] forCellReuseIdentifier:ZJTopicCellId];
     
     //处理cell里button无法响应的问题
-    self.tableView.delaysContentTouches = NO;
+    //[self.tableView setDelaysContentTouches:NO];
 }
 
 - (void)setupRefresh
@@ -91,7 +91,7 @@ static NSString * const  ZJTopicCellId = @"topic";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"29";
+    parameters[@"type"] = @(self.type);
     self.params = parameters;
     
     //发送请求
@@ -110,7 +110,7 @@ static NSString * const  ZJTopicCellId = @"topic";
         
         //结束刷新
         [self.tableView.mj_header endRefreshing];
-
+        
         //页码
         self.page = 0;
         
@@ -131,7 +131,7 @@ static NSString * const  ZJTopicCellId = @"topic";
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
     parameters[@"type"] = @"29";
-    parameters[@"page"] = @(self.page);
+    parameters[@"page"] = @(self.type);
     parameters[@"maxtime"] = self.maxtime;
     self.params = parameters;
     
@@ -169,8 +169,8 @@ static NSString * const  ZJTopicCellId = @"topic";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ZJTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:ZJTopicCellId];
-
     
+    cell.topic = self.topicArray[indexPath.row];
     
     return cell;
 }

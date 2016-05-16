@@ -15,20 +15,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obg-z5-4sM">
-                    <rect key="frame" x="12" y="253" width="300" height="61"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="300" id="EQw-On-EQO"/>
-                    </constraints>
-                    <string key="text">快快登录吧，关注百思最in牛人
-好友动态让你过把瘾～
-奥耶～～</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzC-x2-fWX">
-                    <rect key="frame" x="60" y="354" width="200" height="35"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzC-x2-fWX">
+                    <rect key="frame" x="60" y="354" width="200" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="DaA-KM-HuW"/>
                         <constraint firstAttribute="height" constant="40" id="HYy-BD-dcT"/>
@@ -39,6 +27,9 @@
                     <state key="highlighted" backgroundImage="friendsTrend_login_click">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="loginRegister" destination="-1" eventType="touchUpInside" id="TiA-up-4z5"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_cry_icon" translatesAutoresizingMaskIntoConstraints="NO" id="oOA-zY-WuE">
                     <rect key="frame" x="136" y="165" width="48" height="48"/>
@@ -47,6 +38,18 @@
                         <constraint firstAttribute="height" constant="48" id="cl7-wh-UCk"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obg-z5-4sM">
+                    <rect key="frame" x="10" y="253" width="300" height="61"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="EQw-On-EQO"/>
+                    </constraints>
+                    <string key="text">快快登录吧，关注百思最in牛人
+好友动态让你过把瘾～
+奥耶～～</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>

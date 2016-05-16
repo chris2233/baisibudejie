@@ -21,6 +21,7 @@
 {
     [super awakeFromNib];
     self.backgroundColor = ZJRGBColor(244, 244, 244);
+    
 }
 
 -(void)setCategory:(ZJRecommandCategory *)category

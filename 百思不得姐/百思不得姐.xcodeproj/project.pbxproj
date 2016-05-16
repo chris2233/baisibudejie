@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		1A85C0B5DD675F13719DD645 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9855FF11AD7D05171336403D /* libPods.a */; };
 		2F0592B71CE0684900336E29 /* ZJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0592B61CE0684900336E29 /* ZJNavigationController.m */; };
-		2F3B0EE91CE499B30037121B /* ZJAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3B0EE81CE499B30037121B /* ZJAllViewController.m */; };
-		2F3B0EEC1CE499C50037121B /* ZJVideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3B0EEB1CE499C50037121B /* ZJVideoTableViewController.m */; };
-		2F3B0EEF1CE499D10037121B /* ZJVoiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3B0EEE1CE499D10037121B /* ZJVoiceTableViewController.m */; };
-		2F3B0EF21CE499E50037121B /* ZJPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3B0EF11CE499E50037121B /* ZJPictureViewController.m */; };
-		2F3B0EF51CE499F20037121B /* ZJWordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3B0EF41CE499F20037121B /* ZJWordsViewController.m */; };
+		2F3080691CE86F6E004C259F /* ZJTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3080681CE86F6E004C259F /* ZJTopicViewController.m */; };
+		2F30806C1CE870AA004C259F /* ZJRecommandTagsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F30806B1CE870AA004C259F /* ZJRecommandTagsTableViewController.m */; };
+		2F3080701CE8A0AC004C259F /* ZJLoginRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F30806E1CE8A0AC004C259F /* ZJLoginRegister.m */; };
+		2F3080711CE8A0AC004C259F /* ZJLoginRegister.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F30806F1CE8A0AC004C259F /* ZJLoginRegister.xib */; };
+		2F3080741CE8BD99004C259F /* ZJVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3080731CE8BD99004C259F /* ZJVerticalButton.m */; };
 		2F40C7F11CE5B12100A0EEE3 /* ZJTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F40C7F01CE5B12100A0EEE3 /* ZJTopic.m */; };
+		2F4110861CE75A610043DA31 /* NSDate+ZJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4110851CE75A610043DA31 /* NSDate+ZJExtension.m */; };
 		2F46C4261CE16CB90027FB35 /* ZJFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F46C4251CE16CB90027FB35 /* ZJFriendTrendsViewController.xib */; };
+		2F49D2791CE999DE00C174DA /* ZJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F49D2781CE999DE00C174DA /* ZJTextField.m */; };
 		2F5584431CDE74D8004E47EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F5584421CDE74D8004E47EE /* Images.xcassets */; };
 		2F55848E1CDF4AA8004E47EE /* ZJEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5584691CDF4AA8004E47EE /* ZJEssenceViewController.m */; };
 		2F55848F1CDF4AA8004E47EE /* ZJFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F55846F1CDF4AA8004E47EE /* ZJFriendTrendsViewController.m */; };
@@ -37,7 +39,6 @@
 		2FC7E3DD1CE1D9470015EB49 /* ZJRecommandUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7E3DB1CE1D9470015EB49 /* ZJRecommandUserTableViewCell.m */; };
 		2FC7E3DE1CE1D9470015EB49 /* ZJRecommandUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7E3DC1CE1D9470015EB49 /* ZJRecommandUserTableViewCell.xib */; };
 		2FC7E3E11CE1DD5D0015EB49 /* ZJRecommandUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7E3E01CE1DD5D0015EB49 /* ZJRecommandUser.m */; };
-		2FDF53011CE316EB0091EF78 /* ZJRecommandTagsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF53001CE316EB0091EF78 /* ZJRecommandTagsTableViewController.m */; };
 		2FDF53041CE319B90091EF78 /* ZJRecommandTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF53031CE319B90091EF78 /* ZJRecommandTag.m */; };
 		2FDF530B1CE31B820091EF78 /* ZJRecommandTagTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF53091CE31B820091EF78 /* ZJRecommandTagTableViewCell.m */; };
 		2FDF530C1CE31B820091EF78 /* ZJRecommandTagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF530A1CE31B820091EF78 /* ZJRecommandTagTableViewCell.xib */; };
@@ -65,19 +66,22 @@
 /* Begin PBXFileReference section */
 		2F0592B51CE0684900336E29 /* ZJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJNavigationController.h; sourceTree = "<group>"; };
 		2F0592B61CE0684900336E29 /* ZJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJNavigationController.m; sourceTree = "<group>"; };
-		2F3B0EE71CE499B30037121B /* ZJAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJAllViewController.h; sourceTree = "<group>"; };
-		2F3B0EE81CE499B30037121B /* ZJAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJAllViewController.m; sourceTree = "<group>"; };
-		2F3B0EEA1CE499C50037121B /* ZJVideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJVideoTableViewController.h; sourceTree = "<group>"; };
-		2F3B0EEB1CE499C50037121B /* ZJVideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJVideoTableViewController.m; sourceTree = "<group>"; };
-		2F3B0EED1CE499D10037121B /* ZJVoiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJVoiceTableViewController.h; sourceTree = "<group>"; };
-		2F3B0EEE1CE499D10037121B /* ZJVoiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJVoiceTableViewController.m; sourceTree = "<group>"; };
-		2F3B0EF01CE499E50037121B /* ZJPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJPictureViewController.h; sourceTree = "<group>"; };
-		2F3B0EF11CE499E50037121B /* ZJPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJPictureViewController.m; sourceTree = "<group>"; };
-		2F3B0EF31CE499F20037121B /* ZJWordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJWordsViewController.h; sourceTree = "<group>"; };
-		2F3B0EF41CE499F20037121B /* ZJWordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJWordsViewController.m; sourceTree = "<group>"; };
+		2F3080671CE86F6E004C259F /* ZJTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTopicViewController.h; sourceTree = "<group>"; };
+		2F3080681CE86F6E004C259F /* ZJTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTopicViewController.m; sourceTree = "<group>"; };
+		2F30806A1CE870AA004C259F /* ZJRecommandTagsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJRecommandTagsTableViewController.h; sourceTree = "<group>"; };
+		2F30806B1CE870AA004C259F /* ZJRecommandTagsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJRecommandTagsTableViewController.m; sourceTree = "<group>"; };
+		2F30806D1CE8A0AC004C259F /* ZJLoginRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJLoginRegister.h; sourceTree = "<group>"; };
+		2F30806E1CE8A0AC004C259F /* ZJLoginRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJLoginRegister.m; sourceTree = "<group>"; };
+		2F30806F1CE8A0AC004C259F /* ZJLoginRegister.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJLoginRegister.xib; sourceTree = "<group>"; };
+		2F3080721CE8BD99004C259F /* ZJVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJVerticalButton.h; sourceTree = "<group>"; };
+		2F3080731CE8BD99004C259F /* ZJVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJVerticalButton.m; sourceTree = "<group>"; };
 		2F40C7EF1CE5B12100A0EEE3 /* ZJTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTopic.h; sourceTree = "<group>"; };
 		2F40C7F01CE5B12100A0EEE3 /* ZJTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTopic.m; sourceTree = "<group>"; };
+		2F4110841CE75A610043DA31 /* NSDate+ZJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZJExtension.h"; sourceTree = "<group>"; };
+		2F4110851CE75A610043DA31 /* NSDate+ZJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZJExtension.m"; sourceTree = "<group>"; };
 		2F46C4251CE16CB90027FB35 /* ZJFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		2F49D2771CE999DE00C174DA /* ZJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTextField.h; sourceTree = "<group>"; };
+		2F49D2781CE999DE00C174DA /* ZJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTextField.m; sourceTree = "<group>"; };
 		2F5584421CDE74D8004E47EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2F5584681CDF4AA8004E47EE /* ZJEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJEssenceViewController.h; sourceTree = "<group>"; };
 		2F5584691CDF4AA8004E47EE /* ZJEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJEssenceViewController.m; sourceTree = "<group>"; };
@@ -120,8 +124,6 @@
 		2FC7E3DC1CE1D9470015EB49 /* ZJRecommandUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJRecommandUserTableViewCell.xib; sourceTree = "<group>"; };
 		2FC7E3DF1CE1DD5D0015EB49 /* ZJRecommandUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJRecommandUser.h; sourceTree = "<group>"; };
 		2FC7E3E01CE1DD5D0015EB49 /* ZJRecommandUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJRecommandUser.m; sourceTree = "<group>"; };
-		2FDF52FF1CE316EB0091EF78 /* ZJRecommandTagsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJRecommandTagsTableViewController.h; sourceTree = "<group>"; };
-		2FDF53001CE316EB0091EF78 /* ZJRecommandTagsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJRecommandTagsTableViewController.m; sourceTree = "<group>"; };
 		2FDF53021CE319B90091EF78 /* ZJRecommandTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJRecommandTag.h; sourceTree = "<group>"; };
 		2FDF53031CE319B90091EF78 /* ZJRecommandTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJRecommandTag.m; sourceTree = "<group>"; };
 		2FDF53081CE31B820091EF78 /* ZJRecommandTagTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJRecommandTagTableViewCell.h; sourceTree = "<group>"; };
@@ -188,18 +190,10 @@
 			children = (
 				2F5584681CDF4AA8004E47EE /* ZJEssenceViewController.h */,
 				2F5584691CDF4AA8004E47EE /* ZJEssenceViewController.m */,
-				2FDF52FF1CE316EB0091EF78 /* ZJRecommandTagsTableViewController.h */,
-				2FDF53001CE316EB0091EF78 /* ZJRecommandTagsTableViewController.m */,
-				2F3B0EE71CE499B30037121B /* ZJAllViewController.h */,
-				2F3B0EE81CE499B30037121B /* ZJAllViewController.m */,
-				2F3B0EEA1CE499C50037121B /* ZJVideoTableViewController.h */,
-				2F3B0EEB1CE499C50037121B /* ZJVideoTableViewController.m */,
-				2F3B0EED1CE499D10037121B /* ZJVoiceTableViewController.h */,
-				2F3B0EEE1CE499D10037121B /* ZJVoiceTableViewController.m */,
-				2F3B0EF01CE499E50037121B /* ZJPictureViewController.h */,
-				2F3B0EF11CE499E50037121B /* ZJPictureViewController.m */,
-				2F3B0EF31CE499F20037121B /* ZJWordsViewController.h */,
-				2F3B0EF41CE499F20037121B /* ZJWordsViewController.m */,
+				2F30806A1CE870AA004C259F /* ZJRecommandTagsTableViewController.h */,
+				2F30806B1CE870AA004C259F /* ZJRecommandTagsTableViewController.m */,
+				2F3080671CE86F6E004C259F /* ZJTopicViewController.h */,
+				2F3080681CE86F6E004C259F /* ZJTopicViewController.m */,
 			);
 			path = Cotrollers;
 			sourceTree = "<group>";
@@ -247,6 +241,9 @@
 				2FF871891CE17739002CEA2F /* ZJRecommandViewController.h */,
 				2FF8718A1CE17739002CEA2F /* ZJRecommandViewController.m */,
 				2FF8718B1CE17739002CEA2F /* ZJRecommandViewController.xib */,
+				2F30806D1CE8A0AC004C259F /* ZJLoginRegister.h */,
+				2F30806E1CE8A0AC004C259F /* ZJLoginRegister.m */,
+				2F30806F1CE8A0AC004C259F /* ZJLoginRegister.xib */,
 			);
 			path = Cotrollers;
 			sourceTree = "<group>";
@@ -271,6 +268,10 @@
 				2FC7E3DA1CE1D9470015EB49 /* ZJRecommandUserTableViewCell.h */,
 				2FC7E3DB1CE1D9470015EB49 /* ZJRecommandUserTableViewCell.m */,
 				2FC7E3DC1CE1D9470015EB49 /* ZJRecommandUserTableViewCell.xib */,
+				2F3080721CE8BD99004C259F /* ZJVerticalButton.h */,
+				2F3080731CE8BD99004C259F /* ZJVerticalButton.m */,
+				2F49D2771CE999DE00C174DA /* ZJTextField.h */,
+				2F49D2781CE999DE00C174DA /* ZJTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -362,6 +363,8 @@
 				2F5584831CDF4AA8004E47EE /* UIBarButtonItem+ZJExtension.m */,
 				2F5584841CDF4AA8004E47EE /* UIView+ZJExtense.h */,
 				2F5584851CDF4AA8004E47EE /* UIView+ZJExtense.m */,
+				2F4110841CE75A610043DA31 /* NSDate+ZJExtension.h */,
+				2F4110851CE75A610043DA31 /* NSDate+ZJExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				2F8213791CE6220200DC7204 /* ZJTopicCell.xib in Resources */,
 				2F5F747A1CE1876600E70295 /* ZJRecommandTableViewCell.xib in Resources */,
 				2F5584431CDE74D8004E47EE /* Images.xcassets in Resources */,
+				2F3080711CE8A0AC004C259F /* ZJLoginRegister.xib in Resources */,
 				2FDF530C1CE31B820091EF78 /* ZJRecommandTagTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -652,30 +656,30 @@
 			files = (
 				2F0592B71CE0684900336E29 /* ZJNavigationController.m in Sources */,
 				2F5584901CDF4AA8004E47EE /* ZJMeViewController.m in Sources */,
-				2F3B0EEF1CE499D10037121B /* ZJVoiceTableViewController.m in Sources */,
 				2F5584941CDF4AA8004E47EE /* UIView+ZJExtense.m in Sources */,
 				2F5584911CDF4AA8004E47EE /* ZJNewViewController.m in Sources */,
 				2F40C7F11CE5B12100A0EEE3 /* ZJTopic.m in Sources */,
 				2F5584951CDF4AA8004E47EE /* ZJTabBarController.m in Sources */,
+				2F3080701CE8A0AC004C259F /* ZJLoginRegister.m in Sources */,
 				2FC7E3E11CE1DD5D0015EB49 /* ZJRecommandUser.m in Sources */,
 				2F55848F1CDF4AA8004E47EE /* ZJFriendTrendsViewController.m in Sources */,
+				2F3080741CE8BD99004C259F /* ZJVerticalButton.m in Sources */,
 				2F55848E1CDF4AA8004E47EE /* ZJEssenceViewController.m in Sources */,
-				2F3B0EEC1CE499C50037121B /* ZJVideoTableViewController.m in Sources */,
-				2FDF53011CE316EB0091EF78 /* ZJRecommandTagsTableViewController.m in Sources */,
+				2F3080691CE86F6E004C259F /* ZJTopicViewController.m in Sources */,
 				2FDF53041CE319B90091EF78 /* ZJRecommandTag.m in Sources */,
+				2F30806C1CE870AA004C259F /* ZJRecommandTagsTableViewController.m in Sources */,
 				2FF8718C1CE17739002CEA2F /* ZJRecommandViewController.m in Sources */,
 				2F5F74791CE1876600E70295 /* ZJRecommandTableViewCell.m in Sources */,
-				2F3B0EE91CE499B30037121B /* ZJAllViewController.m in Sources */,
 				2FDF530B1CE31B820091EF78 /* ZJRecommandTagTableViewCell.m in Sources */,
-				2F3B0EF21CE499E50037121B /* ZJPictureViewController.m in Sources */,
+				2F4110861CE75A610043DA31 /* NSDate+ZJExtension.m in Sources */,
 				2F5584931CDF4AA8004E47EE /* UIBarButtonItem+ZJExtension.m in Sources */,
 				2F5584961CDF4AA8004E47EE /* main.m in Sources */,
 				2F5584921CDF4AA8004E47EE /* AppDelegate.m in Sources */,
 				2F8213781CE6220200DC7204 /* ZJTopicCell.m in Sources */,
-				2F3B0EF51CE499F20037121B /* ZJWordsViewController.m in Sources */,
 				2F5F74721CE184F000E70295 /* ZJRecommandCategory.m in Sources */,
 				2F5584971CDF4AA8004E47EE /* ZJTabBar.m in Sources */,
 				2FC7E3DD1CE1D9470015EB49 /* ZJRecommandUserTableViewCell.m in Sources */,
+				2F49D2791CE999DE00C174DA /* ZJTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
