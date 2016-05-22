@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 
 @interface ZJTopic : NSObject
 /**名称*/
@@ -27,9 +29,28 @@
 @property (nonatomic, assign) NSInteger comment;
 /**新浪加v*/
 @property (nonatomic, assign, getter=isSina_v) BOOL sina_v;
+/**图片的高度*/
+@property (nonatomic, assign) CGFloat height;
+/**图片的宽度*/
+@property (nonatomic, assign) CGFloat width;
+/**图片的url小*/
+@property (nonatomic, copy) NSString *small_image;
+/**图片的url大*/
+@property (nonatomic, copy) NSString *large_image;
+/**图片的url中*/
+@property (nonatomic, copy) NSString *middle_image;
+
+@property (nonatomic, assign) ZJTopicViewType type;
 
 
+/**辅助的属性*/
+@property (nonatomic, assign, readonly) CGFloat cellHeight;
 
+/**图片控件的frame*/
+@property (nonatomic, assign, readonly) CGRect pictureViewFrame;
 
+@property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
+/**图片下载的进度*/
+@property (nonatomic, assign) CGFloat pictureProgress;
 
 @end

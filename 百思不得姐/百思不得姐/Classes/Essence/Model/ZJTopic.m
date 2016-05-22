@@ -7,8 +7,22 @@
 //
 
 #import "ZJTopic.h"
+#import <MJExtension.h>
 
 @implementation ZJTopic
+{
+    CGFloat _cellHeight;
+    CGRect _pictureViewFrame;
+}
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{
+             @"small_image"  : @"image0",
+             @"large_image"  : @"image1",
+             @"middle_image" : @"image2"
+             };
+}
 
 -(NSString *)create_time
 {
@@ -41,6 +55,39 @@
         return _create_time;
     }
     
+}
+
+- (CGFloat)cellHeight
+{
+    if (!_cellHeight) {
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 40, MAXFLOAT);
+        CGFloat textH = [self.text boundingRectWithSize:maxSize
+                                                options:NSStringDrawingUsesLineFragmentOrigin
+                                             attributes:@{
+                                                          NSFontAttributeName : [UIFont systemFontOfSize:13]
+                                                          }
+                                                context:nil].size.height;
+        //cell的高度
+        _cellHeight = textH + ZJTopicTextY + ZJTopicCellBottom + 2 * ZJTopicCellMargin;
+        if (self.type == ZJTopicViewTypePicture ) {//图片帖子
+            
+            CGFloat pictureW = maxSize.width;
+            CGFloat pictureH = pictureW * self.height/self.width;
+            //如果算出的pictureH高度>=我们所设定的最大图片高度，则设定图片高度为ZJTopicPicturebreakH ＝ 250
+            if (pictureH >= ZJTopicPictureMaxH) {
+                pictureH = ZJTopicPicturebreakH;
+                self.bigPicture = YES;//大图
+            }
+            //计算图片控件的frame
+            CGFloat pictureX = ZJTopicCellMargin;
+            CGFloat pictureY = ZJTopicTextY + textH + ZJTopicCellMargin;
+            _pictureViewFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            
+            //这里还要加上一个图片离底部的间距
+            _cellHeight += pictureH + ZJTopicCellMargin;
+        }
+    }
+    return _cellHeight;
 }
 
 @end

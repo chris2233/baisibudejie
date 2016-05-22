@@ -8,6 +8,7 @@
 
 #import "ZJTopicCell.h"
 #import <UIImageView+WebCache.h>
+#import "ZJTopicPictureView.h"
 
 @interface ZJTopicCell ()
 //头像
@@ -26,10 +27,23 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 //新浪加v用户
 @property (weak, nonatomic) IBOutlet UIImageView *sina_v;
+//帖子的文字内容
+@property (weak, nonatomic) IBOutlet UILabel *myTextLabel;
 
+@property (weak, nonatomic) ZJTopicPictureView *pictureView;
 @end
 
 @implementation ZJTopicCell
+
+-(ZJTopicPictureView *)pictureView
+{
+    if (!_pictureView) {
+        ZJTopicPictureView *pictureView = [ZJTopicPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
 
 -(void)awakeFromNib
 {
@@ -64,6 +78,15 @@
     [self setupButtonTitle:self.caiButton       count:topic.cai     placeHolder:@"踩"];
     [self setupButtonTitle:self.shareButton     count:topic.repost  placeHolder:@"分享"];
     [self setupButtonTitle:self.commentButton   count:topic.comment placeHolder:@"评论"];
+    
+    //设置帖子的文字内容
+    self.myTextLabel.text = topic.text;
+    
+    //根据帖子的类型添加对应的类型添加
+    if (topic.type == ZJTopicViewTypePicture) {
+        self.pictureView.topic = topic ;
+        self.pictureView.frame = topic.pictureViewFrame;
+    }
 }
 
 /**
@@ -84,11 +107,10 @@
 
 -(void)setFrame:(CGRect)frame
 {
-    static CGFloat margin = 10;
-    frame.origin.x = margin;
+    frame.origin.x = ZJTopicCellMargin;
     frame.size.width -= frame.origin.x * 2;
-    frame.size.height -= margin;
-    frame.origin.y += margin;
+    frame.size.height -= ZJTopicCellMargin;
+    frame.origin.y += ZJTopicCellMargin;
     [super setFrame:frame];
 }
 

@@ -130,8 +130,8 @@ static NSString * const  ZJTopicCellId = @"topic";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"29";
-    parameters[@"page"] = @(self.type);
+    parameters[@"type"] = @(self.type);
+    parameters[@"page"] = @(self.page);
     parameters[@"maxtime"] = self.maxtime;
     self.params = parameters;
     
@@ -179,6 +179,10 @@ static NSString * const  ZJTopicCellId = @"topic";
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    //取出帖子的模型
+    ZJTopic *topic = self.topicArray[indexPath.row];
+
+    
+    return topic.cellHeight;
 }
 @end

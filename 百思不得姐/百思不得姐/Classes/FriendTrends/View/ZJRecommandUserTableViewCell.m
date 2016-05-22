@@ -21,9 +21,9 @@
 
 @implementation ZJRecommandUserTableViewCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     [super awakeFromNib];
-    // Initialization code
 }
 
 -(void)setUser:(ZJRecommandUser *)user
@@ -33,8 +33,6 @@
     self.funsCountLabel.text = [NSString stringWithFormat:@"%zd人关注",user.fans_count];
     
     [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
-        
-    
 }
 
 @end

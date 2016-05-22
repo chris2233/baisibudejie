@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="topic" rowHeight="264" id="KGk-i7-Jjw" customClass="ZJTopicCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="topic" rowHeight="264" id="KGk-i7-Jjw" customClass="ZJTopicCell">
             <rect key="frame" x="0.0" y="0.0" width="445" height="264"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -151,10 +151,17 @@
                             <constraint firstAttribute="height" constant="14" id="mD1-O7-K0y"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYt-zT-gU7">
+                        <rect key="frame" x="10" y="55" width="411" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Jkb-hm-9I4" firstAttribute="top" secondItem="IKG-lK-yUP" secondAttribute="top" id="6U9-3e-K2x"/>
                     <constraint firstItem="p97-Nr-JVo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="9FR-QU-v9w"/>
+                    <constraint firstItem="BYt-zT-gU7" firstAttribute="top" secondItem="p97-Nr-JVo" secondAttribute="bottom" constant="10" id="Dxa-r5-ERw"/>
                     <constraint firstItem="Ri7-uP-EOh" firstAttribute="bottom" secondItem="p97-Nr-JVo" secondAttribute="bottom" constant="5" id="N7o-nT-O4D"/>
                     <constraint firstItem="IKG-lK-yUP" firstAttribute="top" secondItem="p97-Nr-JVo" secondAttribute="top" id="Q08-39-lM6"/>
                     <constraint firstItem="jmj-68-b3z" firstAttribute="leading" secondItem="IKG-lK-yUP" secondAttribute="leading" id="RDD-Ah-SWq"/>
@@ -163,15 +170,18 @@
                     <constraint firstAttribute="bottom" secondItem="8jQ-9P-QQF" secondAttribute="bottom" id="b5z-Eo-B2i"/>
                     <constraint firstItem="p97-Nr-JVo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="dqM-NP-fM6"/>
                     <constraint firstItem="Ri7-uP-EOh" firstAttribute="trailing" secondItem="p97-Nr-JVo" secondAttribute="trailing" constant="5" id="eKC-72-muu"/>
+                    <constraint firstItem="BYt-zT-gU7" firstAttribute="leading" secondItem="p97-Nr-JVo" secondAttribute="leading" id="hiJ-mU-Mw3"/>
                     <constraint firstAttribute="trailing" secondItem="8jQ-9P-QQF" secondAttribute="trailing" id="kXx-6Y-8zq"/>
                     <constraint firstItem="jmj-68-b3z" firstAttribute="bottom" secondItem="p97-Nr-JVo" secondAttribute="bottom" id="p6X-E1-Ih4"/>
                     <constraint firstAttribute="trailing" secondItem="Jkb-hm-9I4" secondAttribute="trailing" constant="24" id="phR-M5-cXk"/>
+                    <constraint firstItem="BYt-zT-gU7" firstAttribute="trailing" secondItem="Jkb-hm-9I4" secondAttribute="trailing" id="vDg-Lk-fvK"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="caiButton" destination="gax-dT-ZXX" id="Nbh-MJ-RpW"/>
                 <outlet property="commentButton" destination="uRq-He-5yW" id="qnp-G2-5ON"/>
                 <outlet property="dingButton" destination="4WE-Pf-HBb" id="OL6-mV-pXP"/>
+                <outlet property="myTextLabel" destination="BYt-zT-gU7" id="aaA-Fo-Osy"/>
                 <outlet property="nameLabel" destination="IKG-lK-yUP" id="U5k-lE-ybA"/>
                 <outlet property="profileImageView" destination="p97-Nr-JVo" id="esl-4y-fpn"/>
                 <outlet property="shareButton" destination="5dv-Xm-ylI" id="oHV-EJ-VVV"/>
